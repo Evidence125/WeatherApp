@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Should I wear a coat?</title>
+</head>
+<body>
+    <fieldset id="mainBox">
+    <h1> Weather </h1>
+        <div id="mainTextContainer"><label id="mainText">Should I wear a coat?</label></div>
+        <div id="text"><input id="city" type="text" placeholder="Enter city"></div>
+        <div ><button type="button" onclick="getWeather()" id="inputSubmit">Search</button></div>
+
+        <img id="weather-icon" src="./Images/Rainy.png" alt="Weather icon">
+
+        <div id="temp-div"></div>
+        <div id="Weather-info"></div>
+        <div id="hour"></div>
+
+    </fieldset>
+    <script src="scirpt.js"></script> 
+</body>
+</html>
