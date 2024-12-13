@@ -1,5 +1,5 @@
 function getWeather() {
-    const apiKey = 'YOUR-API-KEY';
+    const apiKey = '2c17489e0414a30c45f803363e2eb8dd';
     const city = document.getElementById('city').value;
 
     if (!city) {
@@ -32,12 +32,13 @@ function getWeather() {
 }
 
 function displayWeather(data) {
+
     const tempDivInfo = document.getElementById('temp-div');
     const weatherInfoDiv = document.getElementById('weather-info');
     const weatherIcon = document.getElementById('weather-icon');
     const hourlyForecastDiv = document.getElementById('hourly-forecast');
-
-    // Clear previous content
+    
+    // Clear all the previous content 
     weatherInfoDiv.innerHTML = '';
     hourlyForecastDiv.innerHTML = '';
     tempDivInfo.innerHTML = '';
@@ -66,8 +67,8 @@ function displayWeather(data) {
         weatherIcon.alt = description;
 
         showImage();
-    }
-}
+    };
+};
 
 function displayHourlyForecast(hourlyData) {
     const hourlyForecastDiv = document.getElementById('hourly-forecast');
@@ -94,6 +95,8 @@ function displayHourlyForecast(hourlyData) {
 }
 
 function showImage() {
+
     const weatherIcon = document.getElementById('weather-icon');
-    weatherIcon.style.display = 'block'; // Make the image visible once it's loaded
-}
+    weatherIcon.style.display = 'block';
+
+};
