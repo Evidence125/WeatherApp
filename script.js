@@ -28,7 +28,7 @@ function getWeather() {
         .catch(error => {
             console.error('Error fetching hourly forecast data:', error);
             alert('Error fetching hourly forecast data. Please try again.');
-        });
+        });   
 }
 
 function displayWeather(data) {
@@ -91,6 +91,14 @@ function displayHourlyForecast(hourlyData) {
         `;
 
         hourlyForecastDiv.innerHTML += hourlyItemHtml;
+        if (temperature < 18) {
+
+            const mainText = document.getElementById('mainText')
+            mainText.innerHTML = `You're gonna need a jacket`;
+        } else {
+            const mainText = document.getElementById('mainText')
+            mainText.innerHTML = `You're good without a jacket`;
+        }
     });
 }
 
@@ -100,3 +108,15 @@ function showImage() {
     weatherIcon.style.display = 'block';
 
 };
+
+/*Experiment code to try to change main text
+
+function doYouNeed(){
+    
+    if (temperature < 18) {
+
+    const mainText = document.getElementById('mainText')
+    mainText.innerHTML = `You're gonna need a jacket`;
+    console.log('mainText');
+    }
+};*/
